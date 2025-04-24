@@ -23,8 +23,7 @@
 </ul>
 
 <h3>Dataset</h3>
-<p>You can download the dataset used for this project from the following Kaggle link: <a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">Credit Card Fraud Detection Dataset</a>. After downloading, place the <code>creditcard.csv</code> file into the <code>data</code> folder in the project directory. This is required for running the model and the full pipeline.</p>
-<p>You can download the dataset used for this project from the following Kaggle link:</p><p><a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">Credit Card Fraud Detection Dataset</a></p>
+<p>You can download the dataset used for this project from the following Kaggle link: <a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">Credit Card Fraud Detection Dataset</a>.
 <p>Once downloaded, place the <code>creditcard.csv</code> file into the <code>data</code> folder in the project directory. This is required for running the model and the full pipeline.</p>
 
 <h3>Docker</h3>

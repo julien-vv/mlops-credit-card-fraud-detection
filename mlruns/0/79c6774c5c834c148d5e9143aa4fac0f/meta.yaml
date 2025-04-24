@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/79c6774c5c834c148d5e9143aa4fac0f/artifacts
+end_time: 1745508295903
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 79c6774c5c834c148d5e9143aa4fac0f
+run_name: bouncy-hare-87
+run_uuid: 79c6774c5c834c148d5e9143aa4fac0f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745508281370
+status: 3
+tags: []
+user_id: julie

@@ -1,14 +1,12 @@
 from flask import Flask, request, jsonify
 import pandas as pd
-import pickle
+import mlflow.pyfunc
+
 # Initialize the Flask app
 app = Flask(__name__)
 
-# Load the model from MLflow's registry (replace 'LogisticRegression_model' with your model name)
-url = r'.\mlruns\0\fc6f65a104f9403a8b179d342b93d8ae\artifacts\RandomForest_model\model.pkl'
-with open(url, 'rb') as f:
-    model = pickle.load(f)
-
+model_uri = "../mlartifacts/0/7afc90be810947a985a50adc590ad769/artifacts/model"
+model = mlflow.pyfunc.load_model(model_uri)
 
 @app.route('/')
 def home():

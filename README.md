@@ -22,6 +22,11 @@
     <li><strong>app.py</strong>: Uses <strong>Flask</strong> to deploy an API hosting the model.</li>
 </ul>
 
+<h3>Dataset</h3>
+<p>You can download the dataset used for this project from the following Kaggle link:</p>
+<p><a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud" target="_blank">Credit Card Fraud Detection Dataset</a></p>
+<p>Once downloaded, place the <code>creditcard.csv</code> file into the <code>data</code> folder in the project directory. This is required for running the model and the full pipeline.</p>
+
 <h3>Docker</h3>
 
 <p>The project uses <strong>Docker</strong> to build a containerized image of the application. This ensures that the code works consistently on any machine, whether running Linux or Windows. The <strong>Dockerfile</strong> defines the Docker image, which includes Python dependency installation, code cloning, and execution of the <strong>main.py</strong> script. The Docker image is built and validated through the CI/CD pipeline, ensuring a seamless image creation process across different environments.</p>

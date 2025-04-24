@@ -117,8 +117,6 @@ starlette==0.27.0
 streamlit==1.37.1
 streamlit_folium==0.22.0
 tenacity==8.5.0
-tfx==1.14.0
-tfx-bsl==1.14.0
 threadpoolctl==3.6.0
 toml==0.10.2
 tomli==2.0.1

@@ -15,11 +15,11 @@
 <h3>Folder Structure:</h3>
 <p>The <code>src</code> folder contains the essential Python files for training, evaluating, and deploying the model:</p>
 <ul>
-    <li><strong>app.py</strong>: Uses <strong>Flask</strong> to deploy an API hosting the model.</li>
     <li><strong>preprocess_data.py</strong>: Contains functions for preprocessing the data.</li>
     <li><strong>evaluate_model.py</strong>: Includes functions to evaluate the model on test data and generate metrics such as the confusion matrix, ROC AUC score, and AUPRC.</li>
     <li><strong>train_model.py</strong>: Contains functions to train the model with different algorithms (Logistic Regression, Random Forest, XGBoost).</li>
     <li><strong>main.py</strong>: The main script that ties together all the steps (data loading, preprocessing, model training, and evaluation).</li>
+    <li><strong>app.py</strong>: Uses <strong>Flask</strong> to deploy an API hosting the model.</li>
 </ul>
 
 <h3>Docker</h3>

@@ -1,4 +1,3 @@
-# mlops-credit-card-fraud-detection
 <!DOCTYPE html>
 <html lang="en">
 <head>

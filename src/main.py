@@ -1,7 +1,4 @@
 # Import
-import kagglehub
-import os
-
 from preprocess_data import *
 from evaluate_model import *
 from train_model import *

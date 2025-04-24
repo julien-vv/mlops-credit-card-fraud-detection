@@ -31,3 +31,18 @@ jobs:
 
       - name: Run tests
         run: pytest tests/
+
+      # Etape pour construire l'image Docker
+      - name: Build Docker image
+        run: docker build -t myfirstpythonapp .
+
+      # Etape pour tester si le conteneur Docker fonctionne
+      - name: Test Docker container
+        run: |
+          docker run -d --name mycontainer -p 5000:5000 myfirstpythonapp
+          # Attendre que le serveur web dans le conteneur soit accessible
+          docker ps
+          # Vérifier si le serveur est accessible sur le port 5000
+          curl http://localhost:5000 || exit 1
+          # Nettoyer le conteneur après le test
+          docker rm -f mycontainer

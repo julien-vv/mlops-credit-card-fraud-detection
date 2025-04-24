@@ -32,11 +32,11 @@
 
 <h4>Docker Commands:</h4>
 <p><strong>Build the Docker image:</strong></p>
-<pre><code>docker build -t myfirstpythonapp .</code></pre>
+<pre><code>docker build -t fraudproject .</code></pre>
 
 <p><strong>Run the Docker container to launch the application:</strong></p>
 <p>Note that running the Docker container will automatically start the <code>src/main.py</code> script, which performs all the necessary steps (data preprocessing, model training, and evaluation).</p>
-<pre><code>docker run myfirstpythonapp</code></pre>
+<pre><code>docker run fraudproject</code></pre>
 
 <h3>Points for Improvement:</h3>
 

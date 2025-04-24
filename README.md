@@ -1,2 +1,2 @@
-# credit-card-fraud-detection
+# mlops-credit-card-fraud-detection
 test2

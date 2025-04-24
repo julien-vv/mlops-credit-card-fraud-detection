@@ -139,4 +139,3 @@ wrapt==1.15.0
 wsproto==1.2.0
 xgboost==3.0.0
 xyzservices==2024.6.0
-libomp

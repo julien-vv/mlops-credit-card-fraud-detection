@@ -8,7 +8,7 @@
 
 <h1>mlops-credit-card-fraud-detection</h1>
 
-<p>The <strong>Card Fraud Detection</strong> project aims to build a machine learning model capable of detecting credit card fraud. The goal is to deploy a supervised learning model that analyzes transaction data and identifies suspicious activity. This project incorporates various tools for continuous integration, deployment, and data versioning to ensure efficient management of the code and the model in production.</p>
+<p>The <strong>Card Fraud Detection</strong> project aims to build a machine learning model capable of detecting credit card fraud. The goal is to deploy a supervised learning model that analyzes transaction data and identifies suspicious activity. This project integrates various tools for continuous integration, deployment, data versioning, and model versioning to track every step of the process involved in putting the model into production.</p>
 
 <p>The project contains a <strong>test</strong> folder, which includes unit tests for the functions in the source files. These unit tests are automated through <strong>CI/CD</strong> using <strong>GitHub Actions</strong>. Data versioning is managed manually with <strong>DVC</strong>, and the model itself is versioned using <strong>MLflow</strong>.</p>
 
@@ -24,7 +24,7 @@
 
 <h3>Docker</h3>
 
-<p>The project uses <strong>Docker</strong> to build a containerized image of the application. This ensures that the code works consistently on any machine, whether running Linux or Windows. The <strong>Dockerfile</strong> defines the Docker image, which includes Python dependency installation, code cloning, and execution of the <strong>main.py</strong> script. The Docker image is built and verified through the CI/CD pipeline, ensuring that the image creation process works smoothly in different environments.</p>
+<p>The project uses <strong>Docker</strong> to build a containerized image of the application. This ensures that the code works consistently on any machine, whether running Linux or Windows. The <strong>Dockerfile</strong> defines the Docker image, which includes Python dependency installation, code cloning, and execution of the <strong>main.py</strong> script. The Docker image is built and verified through the CI/CD pipeline, ensuring that the image creation process works smoothly across different environments.</p>
 
 <h4>Docker Commands:</h4>
 <p><strong>Build the Docker image:</strong></p>
@@ -41,7 +41,8 @@
     <li>Expanding the unit tests to provide more comprehensive code coverage.</li>
     <li>Dockerizing other parts of the code, such as the preprocessing, training, evaluation, and Flask app components, to further containerize the pipeline.</li>
     <li>Improving the performance of the model and optimizing the code for better efficiency.</li>
-    <li>Enhancing the documentation to improve readability and maintainability of the project, making it easier for other developers to contribute.</li>
+    <li>Developing the Flask API further to handle new data inputs, store predictions, and enhance API functionalities.</li>
+    <li>Enhancing the documentation to improve readability and maintainability, making it easier for other developers to contribute.</li>
 </ul>
 
 </body>

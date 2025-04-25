@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>Card Fraud Detection</h1>
+<h1>MLOps Credit Card Fraud Detection</h1>
 
 <p>The <strong>Card Fraud Detection</strong> project aims to build a machine learning model capable of detecting credit card fraud. The goal is to deploy a supervised learning model that analyzes transaction data and identifies suspicious activity. This project integrates various tools for continuous integration, deployment, data versioning, and model versioning to ensure efficient tracking of every step in deploying the model into production.</p>
 

@@ -10,7 +10,7 @@ def evaluate_model(model, X_test, y_test):
     y_proba = model.predict_proba(X_test)[:, 1]
 
     conf_mat = confusion_matrix(y_test, y_pred)
-    class_rep = classification_report(y_test, y_pred)
+    class_rep = classification_report(y_test, y_pred, output_dict=True)
     score_roc_auc = roc_auc_score(y_test, y_proba)
     auprc = round(average_precision_score(y_test, y_proba), 4)
 

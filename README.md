@@ -29,7 +29,7 @@
 
 <h3>Docker</h3>
 
-<p>The project uses <strong>Docker</strong> to build a containerized image of the application. This ensures that the code works consistently on any machine, whether running Linux or Windows. The <strong>Dockerfile</strong> defines the Docker image, which includes Python dependency installation, code cloning, and execution of the <strong>main.py</strong> script. The Docker image is built and validated through the CI/CD pipeline, ensuring a seamless image creation process across different environments.</p>
+<p>The project uses <strong>Docker</strong> to build a containerized image of the application. This ensures that the code works consistently on any machine, whether running Linux or Windows. The <strong>Dockerfile</strong> defines the Docker image, which includes Python dependency installation and code cloning. The Docker image is built and validated through the CI/CD pipeline, ensuring a seamless image creation process across different environments.</p>
 
 <h4>Docker Commands:</h4>
 <p><strong>Build the Docker image:</strong></p>

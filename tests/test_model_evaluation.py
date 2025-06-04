@@ -23,8 +23,14 @@ class TestEvaluateModel(unittest.TestCase):
 
         self.assertEqual(conf_mat.shape, (2, 2), "Confusion matric should have a shape (2, 2)")
 
-        self.assertIn('precision', class_rep)
-        self.assertIn('recall', class_rep)
+        self.assertIn('precision', class_rep['0'])
+        self.assertIn('recall', class_rep['0'])
+        self.assertIn('precision', class_rep['1'])
+        self.assertIn('recall', class_rep['1'])
+        self.assertIn('precision', class_rep['macro avg'])
+        self.assertIn('recall', class_rep['macro avg'])
+        self.assertIn('precision', class_rep['weighted avg'])
+        self.assertIn('recall', class_rep['weighted avg'])
 
         self.assertGreaterEqual(score_roc_auc, 0, "Le score ROC AUC doit être supérieur ou égal à 0")
         self.assertLessEqual(score_roc_auc, 1, "Le score ROC AUC doit être inférieur ou égal à 1")

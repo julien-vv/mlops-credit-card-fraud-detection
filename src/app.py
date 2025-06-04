@@ -1,17 +1,25 @@
 from flask import Flask, request, jsonify
-import pandas as pd
-import mlflow.pyfunc
+from xgboost import XGBClassifier
+from preprocess_data import *
+import mlflow
+
+## HELP ##
+# cd src
+# python app.py
+# curl http://localhost:8501/
+# curl -X POST http://localhost:5000/predict -H "Content-Type: application/json" --data @sample_class_1.json
+
 
 # Initialize the Flask app
 app = Flask(__name__)
 
-model_uri = "../mlartifacts/0/7afc90be810947a985a50adc590ad769/artifacts/model"
-model = mlflow.pyfunc.load_model(model_uri)
+# Load the model in local
+model = XGBClassifier()
+model.load_model("model.json")
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
     return "Flask app is running."
-
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -19,11 +27,20 @@ def predict():
     if not data:
         return jsonify({'error': 'No input data provided'}), 400
 
-    # Convert data into a DataFrame for prediction
-    input_data = pd.DataFrame(data)
+    # Check if data is a dict (single observation)
+    if isinstance(data, dict):
+        # Convert single dict to a list of dicts to create DataFrame correctly
+        input_data = pd.DataFrame([data])
+    else:
+        # Data is already a list of dicts
+        input_data = pd.DataFrame(data)
+
+    # Processed the data
+    processed_data = preprocessing_data(input_data)
+
 
     # Make the prediction using the model
-    prediction = model.predict(input_data)
+    prediction = model.predict(processed_data)
 
     # Return prediction as JSON
     return jsonify({'prediction': prediction.tolist()})

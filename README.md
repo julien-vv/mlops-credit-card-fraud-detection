@@ -20,6 +20,7 @@
     <li><strong>train_model.py</strong>: Contains functions to train the model with different algorithms (Logistic Regression, Random Forest, XGBoost).</li>
     <li><strong>main.py</strong>: The main script that ties together all the steps (data loading, preprocessing, model training, and evaluation).</li>
     <li><strong>app.py</strong>: Uses <strong>Flask</strong> to deploy an API hosting the model.</li>
+    <li><strong>frontend.py</strong>: Uses <strong>Streamlit</strong> to deploy a web app to make a request to the API for prediction.</li>
 </ul>
 
 <h3>Dataset</h3>

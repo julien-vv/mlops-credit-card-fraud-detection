@@ -9,4 +9,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["bash"]
+EXPOSE 5002
+
+CMD ["python", "src/app.py"]
